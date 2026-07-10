@@ -25,8 +25,8 @@ if not st.session_state.logged_in:
 AI Chatbot is an intelligent multi-tool assistant that can chat naturally, summarize YouTube videos and PDFs, and generate AI images. It remembers conversations across tools, providing a seamless ChatGPT-like experience in one unified interface.
 
 ### 👥 Team Members
-- Sahithi Malladi
 - Tejaswini Talapanti
+- Sahithi Malladi
 - Malleswari Bandaru
 """)
 
