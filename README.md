@@ -66,7 +66,7 @@ cd chatbot/Chatbot
 streamlit run app.py
 
 6️⃣ Open in Browser
-http://localhost:8502
+http://localhost:8501/
 Step 1: Open project folder cd multi_purpose_ai_chatbot Step 2: Create & activate virtual environment
 
 Windows (CMD)
@@ -78,7 +78,7 @@ Create a file named .env in the project root:
 GROQ_API_KEY=your_groq_key_here HF_API_KEY=your_huggingface_key_here Step 5: Run Streamlit app streamlit run app.py
 
 ## Access the app
-Local URL:http://localhost:8502#
+Local URL:http://localhost:8501/
 
 🧑‍🎓 Author
 
