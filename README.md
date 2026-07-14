@@ -77,8 +77,25 @@ Create a file named .env in the project root:
 
 GROQ_API_KEY=your_groq_key_here HF_API_KEY=your_huggingface_key_here Step 5: Run Streamlit app streamlit run app.py
 
+## 📷 Project Screenshots
+### Home Page
+<img width="1893" height="780" alt="image" src="https://github.com/user-attachments/assets/5d4203dc-fbe0-4025-9587-e05e3ff33bd1" />
+
+
+### Youtube Summarization
+<img width="1907" height="897" alt="image" src="https://github.com/user-attachments/assets/aba43869-3b73-45a9-87b4-b79c3d4692e6" />
+
+
+### PDF Summary
+<img width="1897" height="890" alt="image" src="https://github.com/user-attachments/assets/2851dca5-532d-4e80-903b-0cf812e2bcd6" />
+
+
+### Image Classification
+<img width="1318" height="792" alt="image" src="https://github.com/user-attachments/assets/203c0fb7-5c70-424a-a841-d7ecccb56fba" />
+
 ## Access the app
 Local URL:http://localhost:8501/
+
 
 🧑‍🎓 Author
 
@@ -87,4 +104,3 @@ Capstone Project - Multi Source AI Chatbot
 Training Program | January 2026
 🔗Github:https://github.com/talapantitejaswini 
 🔗Linkedin:www.linkedin.com/in/tejaswini-talapanti
-
