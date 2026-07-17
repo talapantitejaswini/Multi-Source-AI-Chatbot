@@ -1,106 +1,199 @@
- # 🤖Multi-source-AI-Chatbot
- 
-## 📌 Problem Statement
+# 🤖 Multi-Source AI Chatbot
 
-Existing chatbots are often limited to a single data source and fail to provide comprehensive and accurate responses.An intelligent Multiple Source AI Chatbot that integrates data from various sources such as user queries, PDFs, YouTube videos, and AI image generation models. The system provides accurate, context-aware responses through a single conversational interface using modern AI technologies.
+An intelligent AI-powered chatbot that integrates multiple data sources into a single conversational interface. Users can chat with AI, summarize PDFs, summarize YouTube videos, and generate AI images—all from one application.
 
-**🎯Goal:To design and develop a Multiple Source AI Chatbot that intelligently retrieves, integrates, and presents information from multiple data sources, providing accurate, context-aware, and user-friendly conversational responses.**
+---
 
-## 💡 Solution Approach
+## 📖 Overview
 
-The proposed solution involves designing a Multiple Source AI Chatbot that integrates data from various sources such as documents, databases, and web APIs. User queries are first processed using Natural Language Processing (NLP) techniques to understand intent and extract key information. Based on the query, relevant data is retrieved from multiple sources simultaneously.
+Multi-Source AI Chatbot is a Streamlit-based application that combines the power of Large Language Models (LLMs) with document processing, video summarization, and AI image generation. Instead of relying on a single information source, the chatbot supports multiple content types to provide context-aware and accurate responses.
 
-The retrieved information is then filtered, combined, and passed to an AI language model to generate a unified, context-aware response. The chatbot interface allows users to interact in natural language, while the backend ensures efficient data retrieval, response generation, and context management. This approach improves accuracy, scalability, and usability compared to single-source chatbots.
+---
 
-## 🚀 Project Features
+## ✨ Features
 
-💬Text Chat with AI (multi-turn conversation) 
-🖼️Image Generation from Prompt 
-🎥YouTube Video Summarization (using transcript) 
-📄PDF Summarization (upload PDF and get summary) 
-🔐 User authentication (Login & Signup)
-🗃️ Chat history storage using SQLite
-🌐 Interactive Streamlit-based UI
-✅ Clean UI with tabs/sections 
-✅ Environment variables for API keys (safe and professional) 
-✅ Error handling (no transcript, invalid links, empty PDF, etc.)
+- 💬 AI-powered conversational chatbot
+- 📄 PDF document summarization
+- 🎥 YouTube video summarization using transcripts
+- 🖼️ AI image generation from text prompts
+- 🔐 User authentication (Login & Signup)
+- 💾 Chat history stored using SQLite
+- 🌐 Interactive Streamlit interface
+- 🔒 Secure API key management using `.env`
+- ⚠️ Error handling for invalid PDFs, broken YouTube links, and missing transcripts
 
-## 📁 Repository Structure
+---
 
--.venv/ – Contains the Python virtual environment and installed dependencies for the project.
--chatbot/ – Root directory that holds all chatbot-related source code and resources.
--Chatbot/ – Main application module containing backend logic, UI, and configurations.
--__pycache__/ – Stores compiled Python bytecode files for faster execution.
--fonts/ – Contains custom font files used for UI or PDF/image rendering.
--generated_images/ – Stores AI-generated images created by the chatbot.
--outputs/ – Holds generated outputs such as summaries, logs, and processed files.
--.env – Stores sensitive environment variables like API keys securely.
--app.py – Entry point of the application that runs the Streamlit interface.
--auth.py – Handles user authentication including login and signup functionality.
--users.py – Manages user data, chat history, and database operations.
--utils.py – Contains core AI functions such as chat response generation, summarization, and image generation.
--database.db – SQLite database used to store user credentials and chat history.
--requirements.txt – Lists all Python packages required to run the project.
--README.md – Provides project overview, setup instructions, and usage details.
+## 🛠️ Tech Stack
 
+### Frontend
+- Streamlit
 
-## ▶️ Steps to Run the Application
-1️⃣ Clone the Repository
-git clone <repository_url>
+### Backend
+- Python
+
+### AI Models & APIs
+- Groq API (LLM)
+- Hugging Face API (Image Generation)
+
+### Database
+- SQLite
+
+### Libraries
+- LangChain
+- PyPDF2
+- youtube-transcript-api
+- python-dotenv
+- Pillow
+- Requests
+
+---
+
+## 📂 Project Structure
+
+```text
+MULTI_SOURCE_AI_CHATBOT/
+│
+├── app.py
+├── auth.py
+├── users.py
+├── utils.py
+├── database.db
+├── requirements.txt
+├── .env
+├── generated_images/
+├── outputs/
+├── fonts/
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+### Clone the repository
+
+```bash
+git clone https://github.com/yourusername/MULTI_SOURCE_AI_CHATBOT.git
 cd MULTI_SOURCE_AI_CHATBOT
+```
 
-2️⃣ Create and Activate Virtual Environment
+### Create a virtual environment
+
+```bash
 python -m venv .venv
+```
+
+### Activate the environment
+
+**Windows**
+
+```bash
 .venv\Scripts\activate
+```
 
-3️⃣ Install Dependencies
+**Linux / macOS**
+
+```bash
+source .venv/bin/activate
+```
+
+### Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-4️⃣ Configure Environment Variables
-Create a .env file inside chatbot/Chatbot/ and add:
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the project root.
+
+```env
 GROQ_API_KEY=your_groq_api_key
 HF_API_KEY=your_huggingface_api_key
+```
 
-5️⃣ Run the Application
-cd chatbot/Chatbot
+---
+
+## ▶️ Run the Application
+
+```bash
 streamlit run app.py
+```
 
-6️⃣ Open in Browser
+Open your browser and visit:
+
+```
 http://localhost:8501/
-Step 1: Open project folder cd multi_purpose_ai_chatbot Step 2: Create & activate virtual environment
+```
 
-Windows (CMD)
+---
 
-python -m venv .venv ..venv\Scripts\activate Step 4: Add API keys in .env
+## 🚀 How It Works
 
-Create a file named .env in the project root:
+1. User logs into the application.
+2. Selects one of the available features:
+   - AI Chat
+   - PDF Summarization
+   - YouTube Summarization
+   - Image Generation
+3. The application processes the input using the appropriate AI service.
+4. The generated response is displayed to the user.
+5. Chat history is stored securely in SQLite.
 
-GROQ_API_KEY=your_groq_key_here HF_API_KEY=your_huggingface_key_here Step 5: Run Streamlit app streamlit run app.py
+---
 
-## 📷 Project Screenshots
-### Home Page
-<img width="1893" height="780" alt="image" src="https://github.com/user-attachments/assets/5d4203dc-fbe0-4025-9587-e05e3ff33bd1" />
+## 📸 Screenshots
 
+### 🏠 Login Page
 
-### Youtube Summarization
-<img width="1907" height="897" alt="image" src="https://github.com/user-attachments/assets/aba43869-3b73-45a9-87b4-b79c3d4692e6" />
-
-
-### PDF Summary
-<img width="1897" height="890" alt="image" src="https://github.com/user-attachments/assets/2851dca5-532d-4e80-903b-0cf812e2bcd6" />
-
-
-### Image Classification
-<img width="1318" height="792" alt="image" src="https://github.com/user-attachments/assets/203c0fb7-5c70-424a-a841-d7ecccb56fba" />
-
-## Access the app
-Local URL:http://localhost:8501/
+<img width="1893" height="780" alt="Screenshot 2026-07-14 111012" src="https://github.com/user-attachments/assets/8abb8221-bb3c-41bc-b25a-7f56f5d0d15b" />
 
 
-🧑‍🎓 Author
+---
 
-👩‍💻Tejaswini Talapanti
-Capstone Project - Multi Source AI Chatbot
-Training Program | January 2026
-🔗Github:https://github.com/talapantitejaswini 
-🔗Linkedin:www.linkedin.com/in/tejaswini-talapanti
+### 💬 AI Chat
+
+<img width="1906" height="883" alt="image" src="https://github.com/user-attachments/assets/b032dc81-093e-4b20-bb1b-08246b6d9681" />
+
+
+---
+
+### 📄 PDF Summarization
+
+<img width="1897" height="890" alt="Screenshot 2026-07-14 111906" src="https://github.com/user-attachments/assets/34247d8e-0c04-43f9-ad75-e4b811cff067" />
+
+
+---
+
+### 🎥 YouTube Summarization
+
+<img width="1907" height="897" alt="Screenshot 2026-07-14 111332" src="https://github.com/user-attachments/assets/640eecc6-58b9-44ab-924f-2f98e514900f" />
+
+
+---
+
+### 🖼️ Image Generation
+<img width="1318" height="792" alt="Screenshot 2026-07-14 111618" src="https://github.com/user-attachments/assets/c83d5227-d59b-4580-9544-d3123cd7878d" />
+
+
+---
+
+## 📌 Future Enhancements
+
+- Voice-based interaction
+- Multi-language support
+- RAG with vector databases
+- Cloud deployment
+- Conversation memory improvements
+
+---
+
+## 👩‍💻 Author
+
+**Tejaswini Talapanti**
+
+- GitHub: https://github.com/talapantitejaswini
+- LinkedIn: www.linkedin.com/in/tejaswini-talapanti
